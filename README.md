@@ -9,4 +9,15 @@ et la deuxieme c'est d'enregistrer un vocal à travers la commande : python mana
 
 Pour changer la durée de l'audio à enregistrer rendez-vous dans le fichier management /commands/record_audio_migrate.py ligne19.
 
+NB: L'image générée reste généralement la même en raison de la gratuité de l'API utilisé qui offre une possibilité très très reduite.
+
+Appréciez le travail.
+
+
+
+
+
+
+Lien vers une version un peu plus améliorée avec une possibilité d'enregistrer sur la page, dont le lien suit : https://github.com/Loloboy95/LLM-automation-With-Kabakoo-Api
+
 
