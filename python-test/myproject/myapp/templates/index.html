@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Transcription et Traduction</title>
+  </head>
+  <body>
+    <h1>Transcription et Traduction</h1>
+    <form
+      action="{% url 'transcribe' %}"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      {% csrf_token %}
+      <label for="audio_file">Fichier audio:</label>
+      <input type="file" name="audio_file" id="audio_file" required />
+      <button type="submit">Transcrire et Traduire</button>
+    </form>
+
+    {% if transcription_bambara %}
+    <p>Transcription en Bambara: {{ transcription_bambara }}</p>
+    {% endif %} {% if translation_french %}
+    <!-- <p>Traduction en Français: {{ translation_french }}</p> -->
+    {% endif %} {% if translation_bambara %}
+    <p>Traduction en Bambara: {{ translation_bambara }}</p>
+    {% endif %} {% if image_url %}
+    <img src="{{ image_url }}" alt="Image générée" style="max-width: 100%" />
+    {% endif %}
+  </body>
+</html>
